@@ -38,7 +38,7 @@ const FinalCTA = () => {
             <Button 
               variant="outline-gold" 
               size="xl"
-              onClick={() => window.open("https://wa.me/56912345678?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios", "_blank")}
+              onClick={() => window.open("https://wa.me/56952039060?text=Hola%2C%20quiero%20información%20sobre%20sus%20servicios", "_blank")}
               className="text-lg"
             >
               <MessageCircle className="mr-2" />

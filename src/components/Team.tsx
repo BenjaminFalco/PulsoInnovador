@@ -4,15 +4,15 @@ import { Linkedin, Mail } from "lucide-react";
 const Team = () => {
   const team = [
     {
-      name: "Pablo Ramírez",
-      role: "Consultor Senior",
+      name: "Pablo Carvajal",
+      role: "ᴀᴅᴍ ᴘúʙʟɪᴄᴀ ʏ ᴄɪᴇɴᴄɪᴀꜱ ᴘᴏʟíᴛɪᴄᴀꜱ",
       specialty: "Estrategia y formulación de proyectos",
       description: "15+ años de experiencia en evaluación de proyectos de inversión y fondos públicos.",
     },
     {
-      name: "Cristóbal Muñoz",
-      role: "Especialista en Formulación",
-      specialty: "Canvas y modelos de negocio",
+      name: "Matias Sepulveda",
+      role: "ᴀᴅᴍ ᴘúʙʟɪᴄᴀ ʏ ᴄɪᴇɴᴄɪᴀꜱ ᴘᴏʟíᴛɪᴄᴀꜱ",
+      specialty: "Asesoría en fondos públicos",
       description: "Experto en diseño de modelos de negocio innovadores y pitch profesional.",
     },
     {

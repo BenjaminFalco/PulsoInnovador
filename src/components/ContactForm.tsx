@@ -80,7 +80,7 @@ const ContactForm = () => {
                     type="tel"
                     value={formData.whatsapp}
                     onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                    placeholder="+56 9 1234 5678"
+                    placeholder="+56 9 5203 9060"
                   />
                 </div>
 
@@ -107,10 +107,28 @@ const ContactForm = () => {
                       <SelectValue placeholder="Selecciona tu región" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="biobio">Región del Bío Bío</SelectItem>
-                      <SelectItem value="metropolitana">Región Metropolitana</SelectItem>
+                      <SelectItem value="arica-parinacota">Región de Arica y Parinacota</SelectItem>
+                      <SelectItem value="tarapaca">Región de Tarapacá</SelectItem>
+                      <SelectItem value="antofagasta">Región de Antofagasta</SelectItem>
+                      <SelectItem value="atacama">Región de Atacama</SelectItem>
+                      <SelectItem value="coquimbo">Región de Coquimbo</SelectItem>
                       <SelectItem value="valparaiso">Región de Valparaíso</SelectItem>
-                      <SelectItem value="otra">Otra región</SelectItem>
+                      <SelectItem value="metropolitana">Región Metropolitana de Santiago</SelectItem>
+                      <SelectItem value="ohiggins">
+                        Región del Libertador General Bernardo O’Higgins
+                      </SelectItem>
+                      <SelectItem value="maule">Región del Maule</SelectItem>
+                      <SelectItem value="nuble">Región de Ñuble</SelectItem>
+                      <SelectItem value="biobio">Región del Biobío</SelectItem>
+                      <SelectItem value="araucania">Región de La Araucanía</SelectItem>
+                      <SelectItem value="los-rios">Región de Los Ríos</SelectItem>
+                      <SelectItem value="los-lagos">Región de Los Lagos</SelectItem>
+                      <SelectItem value="aysen">
+                        Región de Aysén del General Carlos Ibáñez del Campo
+                      </SelectItem>
+                      <SelectItem value="magallanes-antartica">
+                        Región de Magallanes y de la Antártica Chilena
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

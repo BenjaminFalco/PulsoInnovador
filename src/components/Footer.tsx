@@ -1,5 +1,5 @@
 import { Separator } from "@/components/ui/separator";
-import { Phone, Mail, MapPin, Linkedin, Instagram, Facebook } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,6 +8,7 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-2xl font-bold text-accent">
@@ -56,14 +57,17 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Phone className="h-4 w-4 text-accent flex-shrink-0" />
-                <a href="tel:+56912345678" className="hover:text-accent transition-colors">
-                  +56 9 1234 5678
+                <a href="tel:+56952039060" className="hover:text-accent transition-colors">
+                  +56 9 5203 9060
                 </a>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/80">
                 <Mail className="h-4 w-4 text-accent flex-shrink-0" />
-                <a href="mailto:contacto@pulsoinnovador.com" className="hover:text-accent transition-colors">
-                  contacto@pulsoinnovador.com
+                <a 
+                  href="mailto:informaciones@pulsoinnovador.com" 
+                  className="hover:text-accent transition-colors"
+                >
+                  informaciones@pulsoinnovador.com
                 </a>
               </li>
               <li className="flex items-center gap-2 text-primary-foreground/80">
@@ -78,24 +82,15 @@ const Footer = () => {
             <h4 className="font-semibold text-accent">Síguenos</h4>
             <div className="flex gap-4">
               <a 
-                href="#" 
+                href="https://www.instagram.com/pulsoinnovador_consultores/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-secondary rounded-lg hover:bg-accent hover:text-primary transition-all duration-300"
               >
                 <Instagram className="h-5 w-5" />
               </a>
-              <a 
-                href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-accent hover:text-primary transition-all duration-300"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a 
-                href="#" 
-                className="p-2 bg-secondary rounded-lg hover:bg-accent hover:text-primary transition-all duration-300"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
             </div>
+
             <p className="text-xs text-primary-foreground/60 pt-4">
               Horario: Lunes a Viernes 9:00-18:00<br />
               Sábados 10:00-14:00
@@ -109,14 +104,6 @@ const Footer = () => {
           <p>
             © {currentYear} Pulso Innovador Consultores. Todos los derechos reservados.
           </p>
-          <div className="flex gap-6">
-            <button className="hover:text-accent transition-colors">
-              Términos y Condiciones
-            </button>
-            <button className="hover:text-accent transition-colors">
-              Política de Privacidad
-            </button>
-          </div>
         </div>
       </div>
     </footer>
