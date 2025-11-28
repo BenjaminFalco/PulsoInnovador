@@ -68,12 +68,7 @@ const Team = () => {
 
                   {/* Social Links */}
                   <div className="flex justify-center gap-4 pt-4">
-                    <button className="p-2 rounded-full bg-accent/10 hover:bg-accent hover:text-primary transition-colors">
-                      <Linkedin className="h-5 w-5" />
-                    </button>
-                    <button className="p-2 rounded-full bg-accent/10 hover:bg-accent hover:text-primary transition-colors">
-                      <Mail className="h-5 w-5" />
-                    </button>
+                   
                   </div>
                 </div>
               </Card>

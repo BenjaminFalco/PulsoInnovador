@@ -4,26 +4,48 @@ import { FiMenu, FiX } from "react-icons/fi";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  const handleGoHome = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setOpen(false);
+  };
+
+  const handleScrollTo = (sectionId: string) => {
+    const el = document.getElementById(sectionId);
+    if (!el) return;
+
+    const y = el.getBoundingClientRect().top + window.scrollY - 80;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+
+    setOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 w-full bg-black/80 backdrop-blur border-b border-white/10 text-white z-50">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
         {/* LOGO PULSO INNOVADOR */}
-        <a href="#inicio" className="flex items-center gap-2">
-       <img 
-  src="/favicon.png" 
-  alt="Pulso Innovador Logo" 
-  className="h-8 w-8 rounded-full object-cover shadow-lg"
-/>
-
-          <div className="flex flex-col leading-tight">
+        <button
+          onClick={handleGoHome}
+          className="flex items-center gap-2 cursor-pointer"
+        >
+          <img
+            src="/favicon.png"
+            alt="Pulso Innovador Logo"
+            className="h-8 w-8 rounded-full object-cover shadow-lg"
+          />
+          <div className="flex flex-col leading-tight text-left">
             <span className="text-sm font-semibold tracking-wide">
               Pulso Innovador
             </span>
-            <span className="text-[11px] text-gray-300">
-              Consultores
-            </span>
+            <span className="text-[11px] text-gray-300">Consultores</span>
           </div>
-        </a>
+        </button>
 
         {/* HAMBURGUESA MOBILE */}
         <button
@@ -36,34 +58,40 @@ export default function Header() {
 
         {/* MENÚ DESKTOP */}
         <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
-          <a href="#inicio" className="hover:text-yellow-400 transition">
+          <button
+            onClick={handleGoHome}
+            className="hover:text-yellow-400 transition cursor-pointer"
+          >
             Inicio
-          </a>
-          <a href="#servicios" className="hover:text-yellow-400 transition">
+          </button>
+
+          <button
+            onClick={() => handleScrollTo("servicios")}
+            className="hover:text-yellow-400 transition cursor-pointer"
+          >
             Servicios
-          </a>
-          <a href="#metodologia" className="hover:text-yellow-400 transition">
-            Metodología
-          </a>
-          <a href="#casos-exito" className="hover:text-yellow-400 transition">
-            Casos de éxito
-          </a>
-          <a href="#convocatorias" className="hover:text-yellow-400 transition">
+          </button>
+
+          <button
+            onClick={() => handleScrollTo("convocatorias")}
+            className="hover:text-yellow-400 transition cursor-pointer"
+          >
             Convocatorias activas
-          </a>
-          <a href="#equipo" className="hover:text-yellow-400 transition">
-            Equipo
-          </a>
-          <a href="#contacto" className="hover:text-yellow-400 transition">
+          </button>
+
+          <button
+            onClick={() => handleScrollTo("contacto")}
+            className="hover:text-yellow-400 transition cursor-pointer"
+          >
             Contacto
-          </a>
+          </button>
 
           {/* CTA WHATSAPP */}
           <a
             href="https://wa.me/56952039060"
             target="_blank"
             rel="noreferrer"
-            className="bg-green-500 px-4 py-2 rounded font-semibold hover:bg-green-600 transition shadow-md"
+className="bg-[#FFD700] px-4 py-2 rounded font-semibold text-black shadow-md hover:bg-[#E6C200] transition"
           >
             Agenda una reunión
           </a>
@@ -73,55 +101,54 @@ export default function Header() {
       {/* MENÚ MOBILE */}
       {open && (
         <div className="md:hidden bg-black/95 px-6 pb-4 flex flex-col text-base gap-3 border-t border-white/10">
-          <a
-            href="#inicio"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={handleGoHome}
           >
             Inicio
-          </a>
-          <a
-            href="#servicios"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          </button>
+
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={() => handleScrollTo("servicios")}
           >
             Servicios
-          </a>
-          <a
-            href="#metodologia"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          </button>
+
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={() => handleScrollTo("metodologia")}
           >
             Metodología
-          </a>
-          <a
-            href="#casos-exito"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          </button>
+
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={() => handleScrollTo("casos-exito")}
           >
             Casos de éxito
-          </a>
-          <a
-            href="#convocatorias"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          </button>
+
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={() => handleScrollTo("convocatorias")}
           >
             Convocatorias activas
-          </a>
-          <a
-            href="#equipo"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          </button>
+
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={() => handleScrollTo("equipo")}
           >
             Equipo
-          </a>
-          <a
-            href="#contacto"
-            className="hover:text-yellow-400 transition"
-            onClick={() => setOpen(false)}
+          </button>
+
+          <button
+            className="text-left hover:text-yellow-400 transition"
+            onClick={() => handleScrollTo("contacto")}
           >
             Contacto
-          </a>
+          </button>
 
           <a
             href="https://wa.me/56952039060"
